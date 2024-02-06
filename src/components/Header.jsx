@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/disney.png'
+import logo from '../assets/logo.png'
 
 const Header = () => {
 
@@ -49,7 +49,7 @@ const DropMenu = menu.map((menu,ind)=>{
 })
 
   return (
-    <div className='mx-5 md:mx-10 flex items-center justify-between text-gray-300'>
+    <div className='m-5 md:mx-10 flex items-center justify-between text-gray-300'>
       <div className='flex gap-8 items-center'>
         <img src={logo} alt='logo' className='w-[80px] md:w-[115px]'/>
         <div className='hidden lg:flex gap-8'>

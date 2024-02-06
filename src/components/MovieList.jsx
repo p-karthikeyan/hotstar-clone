@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import GlobalApi from '../services/globalAPI';
 
 
-const Slider = () => {
+const MovieList = ({itemId,index}) => {
 
   const [movieList,setMovieList] = useState([]);
   const ImageBaseUrl = "https://image.tmdb.org/t/p/original/";
@@ -19,18 +19,18 @@ const Slider = () => {
   }
 
   useEffect(()=>{
-    getTrending();
+    getGenereList(itemId);
   },[])
 
-  const getTrending = ()=>{
-    GlobalApi.getTrendingMovies.then(res=>{
+  const getGenereList = (id)=>{
+    GlobalApi.getMovieByGenereId(id).then(res=>{
         console.log(res.data.results);
         setMovieList(res.data.results);
     })
   }  
 
   const Movies = movieList.map(item=>{
-    return <img src={ImageBaseUrl+item.backdrop_path} className='hover:border-4 hover:shadow-lg shadow-black border-gray-300 transition-all duration-200 ease-in-out min-w-full md:h-[400px] mr-5 rounded-lg object-cover object-left-top' alt="movie"/>
+    return <img src={ImageBaseUrl+item.backdrop_path} className='hover:border-4 hover:shadow-lg shadow-black border-gray-300 transition-all duration-200 ease-in-out w-[300px] md:h-[400px] mr-5 rounded-lg object-cover object-left-top' alt="movie"/>
   })
     
   return (
@@ -44,4 +44,5 @@ const Slider = () => {
   )
 }
 
-export default Slider
+export default MovieList
+
