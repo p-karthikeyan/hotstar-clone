@@ -44,7 +44,7 @@ const ProductionHouse = () => {
     ]
 
   return (
-    <div className='flex gap-5 md:gap-20 px-16 overflow-x-auto no-scrollbar scroll-smooth my-5'>
+    <div className='flex gap-5 md:gap-20 px-5 md:px-16 overflow-x-auto no-scrollbar scroll-smooth my-5'>
         {
             prod.map(item=>{
                 return <div className='relative min-w-[200px] my-5 cursor-pointer rounded-md hover:scale-110 transition-all duration-500 ease-out hover:border-2 hover:border-blue-300 shadow-lg shadow-black'>

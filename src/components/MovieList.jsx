@@ -37,7 +37,7 @@ const MovieList = ({itemId}) => {
     <div className='z-[90]'>
       <i onClick={()=>slideLeft(carousel.current)} class="bi bi-chevron-left text-white font-bold text-3xl absolute top-[40%] left-5 cursor-pointer hidden md:block"/>
       <i onClick={()=>slideRight(carousel.current)} class="bi bi-chevron-right text-white font-bold text-3xl absolute top-[40%] right-5 cursor-pointer hidden md:block"/>
-      <div className='flex overflow-x-auto no-scrollbar w-full px-16 py-2 scroll-smooth' ref={carousel}>
+      <div className='flex overflow-x-auto no-scrollbar w-full px-5 md:px-16 py-2 scroll-smooth' ref={carousel}>
         {Movies}
       </div>
     </div>

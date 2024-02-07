@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='text-white m-16'>
+    <div className='text-white m-5 md:m-16'>
       <div className='md:flex justify-between text-lg text-gray-400'>
         <div className='mb-4'>
             <p className='font-bold my-4 text-white cursor-pointer'>Company</p>
